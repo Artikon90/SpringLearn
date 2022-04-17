@@ -16,6 +16,8 @@
     <bean id="musicPlayer"
         class="classes.MusicPlayer">
         <property name="music" ref="createRockMusic" />
+        <property name="playerName" value="AIMP" />
+        <property name="volume" value="85" />
     </bean>
 
 </beans>

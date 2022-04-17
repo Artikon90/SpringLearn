@@ -11,5 +11,7 @@ public class StarterSpring {
 //        Music music = context.getBean("createClassicMusic", Music.class);
         MusicPlayer musicPlayer = context.getBean("musicPlayer", MusicPlayer.class);
         musicPlayer.playMusic();
+        System.out.println(musicPlayer.getPlayerName());
+        System.out.println(musicPlayer.getVolume());
     }
 }
