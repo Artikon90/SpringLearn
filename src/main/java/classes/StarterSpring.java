@@ -8,13 +8,8 @@ public class StarterSpring {
         ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext(
                 "applicationContext.xml"
         );
-        Music music = context.getBean("createClassicMusic", Music.class);
-        MusicPlayer musicPlayer = new MusicPlayer(music);
+//        Music music = context.getBean("createClassicMusic", Music.class);
+        MusicPlayer musicPlayer = context.getBean("musicPlayer", MusicPlayer.class);
         musicPlayer.playMusic();
-
-        music = context.getBean("createRockMusic", Music.class);
-        MusicPlayer musicPlayer1 = new MusicPlayer(music);
-        musicPlayer1.playMusic();
-        context.close();
     }
 }

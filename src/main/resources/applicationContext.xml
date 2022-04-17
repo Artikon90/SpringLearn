@@ -15,4 +15,9 @@
           class="classes.RockMusic">
     </bean>
 
+    <bean id="musicPlayer"
+        class="classes.MusicPlayer">
+        <constructor-arg ref="createRockMusic"/>
+    </bean>
+
 </beans>
