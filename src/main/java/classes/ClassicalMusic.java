@@ -1,7 +1,9 @@
 package classes;
 
 import interfaces.Music;
-//Just some info for test spring beans and context
+import org.springframework.stereotype.Component;
+
+@Component("createClassicMusic")
 public class ClassicalMusic implements Music {
     @Override
     public String getSong() {
