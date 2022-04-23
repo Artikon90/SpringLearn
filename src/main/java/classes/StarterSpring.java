@@ -1,11 +1,12 @@
 package classes;
 
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 import java.util.Scanner;
 
 public class StarterSpring {
-    static ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext(
-            "applicationContext.xml");
+    static AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(
+            SpringConfiguration.class);
     static MusicPlayer musicPlayer = context.getBean("musicPlayer", MusicPlayer.class);
     public static byte requiresInput() {
         System.out.println("Select genre: \n 1. Classic \n 2. Rock");
