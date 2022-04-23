@@ -37,4 +37,7 @@ public class StarterSpring {
         byte userInput = requiresInput();
         userSelect(userInput);
     }
+    {
+        context.close();
+    }
 }
